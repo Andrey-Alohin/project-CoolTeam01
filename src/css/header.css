@@ -63,6 +63,11 @@
 }
 
 /* #region Style Khavin header */
+.nav-list {
+  display: flex;
+  width: 100%;
+}
+
 .page-header {
   position: absolute;
   top: 20px;
@@ -75,6 +80,12 @@
     left: 32px;
     top: 32px;}
 }
+@media only screen and (min-width: 1080px) {
+  .page-header {
+    right: 100px;
+    left: 100px;
+  }
+}
 
 .nav-li, .btn {
   display: none;
@@ -82,13 +93,78 @@
 @media only screen and (min-width: 1080px) {
   .nav-li, .btn {
     display: flex;
+    gap: 8px;
+    align-items: center;
   }
+}
+.nav-li {
+  margin-right: 20px;
+}
+
+.btn {
+  border-radius: 30px;
+  padding: 16px 32px;
+  background-color: #7a3145;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 1.11;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+}
+.btn:hover,
+.btn:focus {
+  color: #7a3145;
+  background-color: #d4bfc4;
+}
+.btn:hover:active {
+  background-color: #fbfbfb;
 }
 
 .logo-header {
   display: flex;
   padding: 8px 0;
+  align-items: center;
+  margin-right: auto;
 }
+
+.header-link {
+  font-size: 16px;
+  line-height: 1.25;
+  text-align: center;
+  border: 1px solid #fbfbfb;
+  border-radius: 12px;
+  padding: 12px;
+  height: 44px;
+  background-color: #7a3145;
+}
+.header-link:hover,
+.header-link:focus {
+  color: #7a3145;
+  border: 1px solid #d4bfc4;
+  background-color: #d4bfc4;
+}
+.header-link:active {
+  color: #7a3145;
+  background-color: #fbfbfb;
+}
+
+/* .nav-item {
+  border: 1px solid #fbfbfb;
+  border-radius: 12px;
+  padding: 12px;
+  height: 44px;
+  background-color: #7a3145;
+} */
+/* .nav-item:hover,
+.nav-item:focus {
+  color: #7a3145;
+  border: 1px solid #d4bfc4;
+  background-color: #d4bfc4;
+}
+.nav-item:active {
+  color: #7a3145;
+  background-color: #fbfbfb;
+} */
 /* #endregion */
 
 /* #region Mobile Menu */
@@ -190,15 +266,15 @@
 }
 
 .white-item {
-  color: #7a3145;
-  background-color: #fbfbfb;
+  background-color: #7a3145;
+  color: #fbfbfb;
   transition: background-color 500ms cubic-bezier(0.4, 0, 0.2, 1), color 500ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.white-item:hover,
+/* .white-item:hover, */
 .white-item:active {
-  background-color: #7a3145;
-  color: #fbfbfb;
+  color: #7a3145;
+  background-color: #fbfbfb;
 
 }
 
@@ -239,7 +315,7 @@
   }
 }
 
-.mobile-menu-btn:hover,
+/* .mobile-menu-btn:hover, */
 .mobile-menu-btn:active {
   background-color: #fbfbfb;
   color: #7a3145;
